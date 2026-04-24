@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News App</title>
+</head>
+<body>
+    <h2>News Search App</h2>
+    <form method="POST">
+        <input type="text" name="topic" placeholder="Enter topic" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% for article in articles %}
+        <div>
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.description }}</p>
+            <a href="{{ article.url }}" target="_blank">Read more</a>
+            <hr>
+        </div>
+    {% endfor %}
+</body>
+</html>
